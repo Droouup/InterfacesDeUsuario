@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — El Samán</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="d-flex align-items-center gap-3">
+      <img src="img/logo.png" alt="logo" class="logo-top" onerror="this.style.display='none'">
+      <div>
+        <div class="page-title">El Samán</div>
+        <div class="small-muted">Dashboard</div>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <div class="user-info">
+        <i class="bi bi-person-circle"></i>
+        <span id="role-display">--</span>
+      </div>
+
+      <!-- Role switch (optional visual) -->
+      <div id="role-switch" class="btn-group d-none d-md-flex" role="group">
+        <button id="btn-role-user" class="btn btn-sm btn-outline-light">Usuario</button>
+        <button id="btn-role-admin" class="btn btn-sm btn-outline-light">Admin</button>
+      </div>
+
+      <button id="btn-logout" class="btn btn-outline-light btn-sm"><i class="bi bi-box-arrow-right"></i></button>
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <nav class="nav-sections">
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="inventario.html">Inventario</a>
+    <a href="registro.html">Registro</a>
+    <a href="reportes.html">Reportes</a>
+  </nav>
+
+  <main class="main-content">
+    <div class="container">
+      <h3 class="mb-3">Resumen</h3>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-modern p-3 shadow-sm">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="mb-1">Total de productos</h6>
+                <div class="h3 mb-0">245</div>
+              </div>
+              <i class="bi bi-box-seam fs-2 text-wood"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-modern p-3 shadow-sm">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="mb-1">Productos bajo stock</h6>
+                <div class="h3 mb-0 text-warning">32</div>
+              </div>
+              <i class="bi bi-exclamation-triangle-fill fs-2 text-warning"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-modern p-3 shadow-sm">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="mb-1">Agotados</h6>
+                <div class="h3 mb-0 text-danger">15</div>
+              </div>
+              <i class="bi bi-x-circle-fill fs-2 text-danger"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="mt-4">
+        <h5>Movimientos recientes</h5>
+        <div class="table-responsive bg-white p-3 rounded shadow-sm mt-2">
+          <table class="table table-hover mb-0">
+            <thead class="bg-wood text-white">
+              <tr><th>Producto</th><th>Tipo</th><th>Cantidad</th><th>Fecha</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Pino 2x4</td><td>Ingreso</td><td>50</td><td>2025-11-23</td></tr>
+              <tr><td>Roble 1x3</td><td>Salida</td><td>12</td><td>2025-11-23</td></tr>
+              <tr><td>Cedro 3x3</td><td>Ingreso</td><td>20</td><td>2025-11-22</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
